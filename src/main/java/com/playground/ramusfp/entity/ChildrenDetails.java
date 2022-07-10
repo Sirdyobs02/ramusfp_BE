@@ -7,12 +7,11 @@ import javax.persistence.*;
 
 @Entity
 @Data
-public class ChildrenDetails extends Person {
+public class ChildrenDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    @ManyToOne
-    @JoinColumn(name = "children_details_policy_number")
-    private Policy policyNumber;
+    private String firstname;
+    private String surname;
+    private String idNumber;
 }

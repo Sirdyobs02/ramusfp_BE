@@ -6,14 +6,13 @@ import javax.persistence.*;
 
 @Entity
 @Data
-public class SpouseDetails extends Person {
+public class SpouseDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    @OneToOne
-    @JoinColumn(name = "spouse_details_policy_number")
-    private Policy policyNumber;
+    private String firstname;
+    private String surname;
+    private String idNumber;
 
 }

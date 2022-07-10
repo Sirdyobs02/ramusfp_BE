@@ -8,13 +8,18 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor
 @Data
-public class PolicyPayer extends Person{
+public class PolicyPayer{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    @OneToOne
-    @JoinColumn(name = "policy_payer_policy_number")
-    private Policy policyNumber;
+    private String firstname;
+    private String surname;
+    private String idNumber;
+    private String cellNumber;
+    private String telephone;
+    private String postalAddress;
+    private String postalCode;
+    private String email;
+    private String relationshipToMember;
 }
